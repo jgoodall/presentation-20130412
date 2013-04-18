@@ -1,0 +1,239 @@
+extends includes/layout
+
+block slides
+  //- each slide should start with section, or nest sections for vertical
+  section
+    h1 Visual Analytics
+    h5 Oak Ridge National Laboratory
+    h6(style='font-size: 75%;margin-top:-20px') Cyberspace Sciences and Information Intelligence Research Group
+    br
+    p
+      | John Goodall
+      br
+      small 865-446-0611 / jgoodall@ornl.gov
+      br
+    p
+      img(src='img/sava.png', style='border:none;')
+  //-
+  //- Agenda
+  //-
+  section
+    h2 Agenda
+    ul
+      li What is <strong>Visual Analytics</strong>?
+      li SAVA Research Team
+      li Health Care Projects
+      li Cyber Security Projects
+  //-
+  //- What is Visual Analytics?
+  //-
+  section
+    h1 What is Visual Analytics?
+    p
+      img(src='img/sava-small.png', style='border:none;')    
+  section
+    h2 Information Visualization
+    blockquote(cite='http://www.infovis-wiki.net/index.php?title=Information_Visualization', style='font-size: 140%;')  The purpose of visualization is <strong>insight</strong>, not pictures
+    p(style='text-align: right; font-size: 65%;')
+      | - Ben Schneiderman, 1999
+  section
+    h2 Visual Analytics is not...
+    ul
+      li Static explanatory infographics
+      li Scientific visualization
+      li Geographic information systems (kind of)
+  section
+    h2 Visual Analytics
+    ul
+      li Focused on sensemaking and analytical reasoning
+      li Concerned with abstract data
+      li Focused on collaboration
+      li Desiged by multidisciplinary teams
+      li Focused on exploration instead of explanation
+  section
+    h2 Visual Analytics 
+    br
+    h3 Visualization + Computation
+  //-
+  //- SAVA Research Team
+  //-
+  section
+    h1 SAVA Research Team
+    p
+      img(src='img/sava-small.png', style='border:none;')    
+  section
+    h2 Mission
+    p(style='font-size: 1.5em; text-align:left') Develop situation awareness and visual analytics tools, methods and platforms to facilitate <strong>situational understanding</strong> and <strong>insight discovery</strong> from large, complex, heterogeneous data
+    aside.notes
+      | Our mission is to enable users to discover facts about their data, or connections within their data, that would otherwise remain hidden.
+  section
+    h2 Approach to Visual Analytics
+    ul
+      li Automate the repetitive and the mundane
+      li Algorithms should not relearn domain knowledge
+      li Users' domain knowledge should be captured and used
+      li Algorithms should be transparent and understandable
+      li Simple displays are good (and better when combined)
+      li Visualizations do not always have to be intuitive
+      li Give users time to slow down to explore the data
+  section
+    h2 Research Areas
+    div(style='font-size: 28px;')
+      ul
+        li
+          | Mathematics
+          ul(style='list-style: none;')
+            li Probabilistic modeling
+            li Graph modeling & algorithms
+            li Theorems
+        li
+          | Human-Computer Interaction
+          ul(style='list-style: none;')
+            li Information visualization
+            li Use-centered design
+            li Domain and user modeling
+            li User testing / experimentation
+      ul
+        li
+          | Machine Learning
+          ul(style='list-style: none;')
+            li Unsupervised learning
+            li Active learning
+            li Online learning
+        li
+          | Computing Platforms
+          ul(style='list-style: none;')
+            li Streaming platforms & algorithms
+            li Distributed storage & algorithms
+            li Mobile computing
+            li   
+  //-
+  //- Health Care Projects
+  //-
+  section
+    h1 Health Care Projects
+    p
+      img(src='img/sava-small.png', style='border:none;')
+  section
+    h1 GeoVar
+    h3 Geographic Variation
+    p
+      img(src='img/healthgeo-thumb.png', style='border:none;')
+  section
+    h2 geovar :: problem
+    ul
+      li CMS created public health indicator data sets at the different geographic levels for public use, but the files are just data tables which are not easily digested by non-experts
+      li Need an easily understandable visualization to show variations and changes over time and locale for many different health indicators
+  section
+    h2 geovar :: approach
+    ul
+      li Combine visualizations to show how geographic regions compare
+      li Small multiples of many indicators to compare years and indicators
+  section
+    p
+      img(src='img/healthgeo.png', style='border:none;')
+    p(style='margin-top: 30px;')
+      small
+        a(href='http://jgoodall.github.com/projects/cms-geo/') demonstration
+    p(style='margin-top: 30px;')
+      small
+        //-a(href='http://ornl-situ.github.com/cms-geovar/') demonstration
+        a(href='http://localhost:8081/') demonstration
+  section
+    h1 Link-UI
+    h3 Linking Data Sources into a Graph
+    p
+      img(src='img/linkui-thumb.png', style='border:none;')    
+  section
+    h2 link-ui :: problem
+    ul
+      li Schema matching - identifying related objects for joining disparate data sets - is often required to gain insight into complex phenomenon
+      li Schema matching is a difficult, typically manual, process that requires domain expertise and time to comb through data and meta-data
+  section
+    h2 link-ui :: approach
+    ul
+      li Probabilistic modeling of the values of each field to identify possible matches for each pair of fields
+      li Visualization to let the user correct or add links to each field
+      li Export mappings as RDF to enable joining data sets into single graph
+  section
+    p
+      img(src='img/linkui.png', style='border:none;')
+    p(style='margin-top: 30px;')
+      small
+        a(href='http://localhost:8082/') demonstration
+  //-
+  //- Cyber Security Projects 
+  //-
+  section
+    h1 Cyber Security Projects
+    p
+      img(src='img/sava-small.png', style='border:none;')    
+  section
+    h1 nv
+    h3 Nessus Vulnerability Visualization
+    p
+      img(src='img/nv-thumb.png', style='border:none;')    
+  section
+    h2 nv :: problem
+    ul
+      li Vulnerability assessment tools can expose weak points within a computing network
+      li These tools can produce very large data sets in medium/large networks
+      li It can be difficult to get the big picture of the security posture of your network from current user interfaces for vulnerability assessment tools
+      li It is impossible to compare scans to determine the differences between them - has the network become more vulnerable or more secure?
+      li Users' domain knowledge is not taken into account
+  section
+    h2 nv :: approach
+    ul
+      li Web-based, zoomable treemap of host vulnerabilities for entire network
+      li Visualize a single vulnerability scan shows the state of the network
+      li Compare two vulnerability scans shows fixed, new, and open issues
+      li Re-orderable data hierarchy (group, IP, port, issue)
+      li View issues by severity, criticality or count
+      li Filter interactively by severity, issue type, top issues
+      li User defined groupings of assets and tagging of high-value assets
+  section
+    p
+      img(src='img/nv.png', style='border:none;')
+    p(style='margin-top: 30px;')
+      small
+        //-a(href='http://ornl-situ.github.com/nv/') demonstration
+        a(href='http://localhost:8083/') demonstration
+  section
+    h1 situ
+    h3 A Scalable Framework for Timely Discovery and Situational Understanding of Cyber Attacks
+    p
+      img(src='img/situ-thumb.png', style='border:none;')
+  section
+    h2 situ :: problem
+    ul
+      li Cyber attacks cost commercial and governmental organizations vast dollar amounts, result in stolen intellectual property, and reveal state secrets that endanger lives
+      li Sophisticated attack groups have established a presence in the networks of many organizations
+      li Discovering novel and sophisticated cyber attacks and providing situation awareness are ongoing problems in computer network defense
+      li Cyber defense analysts maintain continually evolving mental models that allow them to differentiate between malicious and benign traffic, but current systems do not exploit this knowledge
+      li Current attack discovery systems typically focus on a single type of data, even though some sophisticated attacks can only be identified from looking at multiple data sets
+  section
+    h2 situ :: problem
+    br
+    h4 Current systems focus technologies at identifying attacks, but provide little in the way of helping analysts make rapid decisions
+  section
+    h2 situ :: approach
+    ul
+      li Anomaly detection - unsupervised, probabilistic modeling of data for different contexts allows the system to model behavior at multiple scales
+      li Event classification - supervised machine learning algorithms allow users to incorporate their own domain knowledge into the system
+      li Information visualization - real-time event visualization provides an understanding of why events are anomalous and malicious to furnish users with the information to make decisions
+      li Feedback loop - a context-aware learning feedback loop helps to provide labeled data to algorithms while minimizing the burden on users
+  section
+    p
+      img(src='img/situ.png', style='border:none;')
+  section
+    h1 Visual Analytics
+    h5 Oak Ridge National Laboratory
+    h6(style='font-size: 75%;margin-top:-20px') Cyberspace Sciences and Information Intelligence Research Group
+    br
+    p
+      | John Goodall
+      br
+      small 865-446-0611 / jgoodall@ornl.gov
+      br
+    p
+      img(src='img/sava.png', style='border:none;')

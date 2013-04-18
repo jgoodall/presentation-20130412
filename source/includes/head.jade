@@ -1,0 +1,17 @@
+head
+  include ../_config
+  meta(charset='utf-8')
+  title= title
+  meta(name='description', content='#{description}')
+  meta(name='author', content='#{author}')
+  meta(name='apple-mobile-web-app-capable', content='yes')
+  meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+  link(rel='stylesheet', href='css/reveal.min.css')
+  link#theme(rel='stylesheet', href='css/theme/#{theme}.css')
+  //- For syntax highlighting 
+  link(rel='stylesheet', href='lib/css/zenburn.css')
+  //- If the query includes 'print-pdf', use the PDF print sheet 
+  script
+    document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  //if lt IE 9
+    script(src='lib/js/html5shiv.js')

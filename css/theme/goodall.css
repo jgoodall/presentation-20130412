@@ -1,0 +1,221 @@
+/**
+ * A theme for reveal.js.
+ * 
+ * Copyright (C) 2013 John Goodall, http://jgoodall.github.com/
+ */
+.reveal h1 {
+  font-size: 76.5px;
+  margin-bottom: 25px;
+}
+
+.reveal h2 {
+  font-size: 59.5px;
+  margin-bottom: 15px;
+}
+
+.reveal h3 {
+  font-size: 42.5px;
+  margin-bottom: 5px;
+}
+
+.reveal h4 {
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+.reveal h5 {
+  font-size: 30.6px;
+}
+
+.reveal h6 {
+  font-size: 27.2px;
+}
+
+.reveal strong {
+  font-weight: 500;
+  color: #318a9e;
+}
+
+.reveal blockquote {
+  font-size: 42.5px;
+  font-style: normal;
+  padding: 10px 15px;
+  color: #777;
+  box-shadow: none;
+  text-align: left;
+}
+
+.reveal blockquote:before {
+  font-size: 68px;
+  color: rgba(51, 51, 51, 0.25);
+}
+
+.reveal blockquote:after {
+  content: none;
+  border: none;
+}
+
+.reveal section img {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.footer {
+  font-family: "Gill Sans", "Helvetica Neue", "Helvetica";
+  font-size: 24;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 0.25);
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  z-index: 20;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #f0f0f0;
+  background: -moz-radial-gradient(center, circle cover, white 0%, #f0f0f0 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f0f0f0));
+  background: -webkit-radial-gradient(center, circle cover, white 0%, #f0f0f0 100%);
+  background: -o-radial-gradient(center, circle cover, white 0%, #f0f0f0 100%);
+  background: -ms-radial-gradient(center, circle cover, white 0%, #f0f0f0 100%);
+  background: radial-gradient(center, circle cover, white 0%, #f0f0f0 100%);
+  background-color: #ecece7;
+}
+
+.reveal {
+  font-family: "Gill Sans", "Helvetica Neue", "Helvetica";
+  font-size: 34px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #333333;
+}
+
+::selection {
+  color: white;
+  background: rgba(59, 165, 189, 0.15);
+  text-shadow: none;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #318a9e;
+  font-family: "Gill Sans", "Helvetica Neue", "Helvetica";
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none;
+}
+
+.reveal h1 {
+  text-shadow: none;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: #3ba5bd;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  -ms-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+.reveal a:not(.image):hover {
+  color: #85c9d9;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #297283;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #3ba5bd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #3ba5bd;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #3ba5bd;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #3ba5bd;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #3ba5bd;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #85c9d9;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #85c9d9;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #85c9d9;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #85c9d9;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+  background: #3ba5bd;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}

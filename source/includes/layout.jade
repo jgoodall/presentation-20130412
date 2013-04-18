@@ -1,0 +1,12 @@
+!!! 5
+html(lang='en')
+  include head
+  body
+    .reveal
+      .slides
+        //- include all of the slides defined in the main index.jade file
+        block slides
+    //- include a footer logo on each slide (if configured in _config)
+    .footer
+      img(src="#{footerImage}")
+    include foot
